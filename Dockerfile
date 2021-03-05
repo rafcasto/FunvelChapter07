@@ -1,3 +1,3 @@
 FROM openjdk:8-jdk-alpine
-
-ENTRYPOINT ["java","-version"]
+ADD target/*.jar microservice.jar
+ENTRYPOINT ["java","-jar","microservice.jar"]
